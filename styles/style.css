@@ -1,0 +1,124 @@
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vh;
+    background-color: var(--main);
+    inline-size: var(--page_inline);
+    min-block-size: var(--page_block);
+    padding-top: var(--padding_main_block);
+    padding-bottom: var(--padding_main_block);
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    text-transform: uppercase;
+    inline-size: 80%;
+}
+
+
+.txtrepls {
+    display: none;
+}
+
+.txtorig:hover {
+    display: none;
+}
+
+.txtorig:hover + .txtrepls {
+    display: block;
+}
+
+.fast_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5vw;
+    inline-size: 80%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    outline: 2px solid var(--boldaccent);
+}
+
+.card h3 {
+    padding: 0.5vh 0.5vh 0 0.5vh;
+    text-transform: uppercase;
+}
+
+.card p {
+    padding: 0.5vh;
+}
+
+.galery {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+    inline-size: 95%;
+}
+
+.img {
+    inline-size: 100%;
+    block-size: 100%;
+    filter: sepia(50%);
+}
+
+
+.entering {
+    position: fixed;
+    font-size: 2rem;
+    z-index: 3;
+    top: 50vh;
+    background-color: var(--boldaccent);
+    color: var(--dop);
+    border: none;
+    box-shadow: 0.4vh 0.4vh 16px var(--accent);
+}
+
+.onefre {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    inline-size: 50vw;
+    block-size: 100vh;
+    background-color: var(--accent);
+}
+
+.twofre {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    inline-size: 50vw;
+    block-size: 100vh;
+    background-color: var(--accent);
+}
+
+@media (width < 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .galery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
