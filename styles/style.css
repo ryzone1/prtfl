@@ -203,4 +203,8 @@ body {
 	.galery {
 		grid-template-columns: repeat(1, 1fr);
 	}
+
+	.txtorigthree:hover {
+		animation: none;
+	}
 }
