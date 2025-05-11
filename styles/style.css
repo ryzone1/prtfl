@@ -37,6 +37,8 @@
     display: block;
 }
 
+
+
 .fast_cards {
     display: flex;
     flex-direction: column;
@@ -56,31 +58,36 @@
     align-items: center;
     gap: 1vw;
     outline: 2px solid var(--boldaccent);
+    padding: var(--padding_cards);
 }
 
 .card h3 {
-    padding: 0.5vh 0.5vh 0 0.5vh;
     text-transform: uppercase;
 }
 
-.card p {
-    padding: 0.5vh;
-}
 
 .galery {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     gap: 1vw;
-    inline-size: 95%;
+    inline-size: 100%;
 }
 
 .img {
     inline-size: 100%;
     block-size: 100%;
     filter: sepia(50%);
+    transition: 0.5s;
 }
 
+.img:hover {
+    animation: wiggle 0.2s 2;
+}
+
+.btn_text {
+    animation:changes 0.7s infinite;
+}
 
 .entering {
     position: fixed;
@@ -90,7 +97,17 @@
     background-color: var(--boldaccent);
     color: var(--dop);
     border: none;
-    box-shadow: 0.4vh 0.4vh 16px var(--accent);
+    box-shadow: 0.4vh 0.4vh 0 var(--dop);
+    transition: 1s;
+}
+
+.entering-end{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn_text-end {
+    animation: none;
 }
 
 .onefre {
@@ -113,9 +130,20 @@
     background-color: var(--accent);
 }
 
+.block-spin-one {
+    animation: shatleft 2s ease forwards;
+
+}
+
+.block-spin-two {
+    animation: shatright 2s ease forwards;
+}
+
+
 @media (width < 768px) {
     .cards {
         grid-template-columns: 1fr;
+        gap: 2vh;
     }
 
     .galery {

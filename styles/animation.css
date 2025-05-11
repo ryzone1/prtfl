@@ -1,0 +1,73 @@
+@keyframes shatleft {
+    0% {
+        transform: translateX(0%);
+    }
+    10% {
+        transform: translateX(-10%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    70% {
+        transform: translateX(-70%);
+    }
+    100% {
+        transform: translateX(-100%);
+        background-color: transparent
+    }
+}
+
+@keyframes shatright {
+    0% {
+        transform: translateX(0%);
+    }
+    10% {
+        transform: translateX(10%);
+    }
+    50% {
+        transform: translateX(50%);
+    }
+    70% {
+        transform: translateX(70%);
+    }
+    100% {
+        transform: translateX(100%);
+        background-color: transparent
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: skewX(24deg);
+     } 
+    10% {transform: skewX(-8deg); filter: saturate(270%)}
+    20% {transform: skewY(55deg); }
+    30% {transform: skewX(-90deg); transform: translateX(1000%)}
+    40% { transform: skewX(29deg); filter: invert(100%);}
+    50% {transform: skewX(-90deg); filter: saturate(170%)}
+    60% {transform: skewY(3deg); }
+    70% {transform: skewX(-2deg); transform: translateX(-1000%)}
+    80% {transform: translateX(1000%); }
+    90% {transform: skewY(10deg); }
+    100% {transform: skewX(0deg); filter: saturate(870%)}
+}
+
+@keyframes changes{
+    0% {text-shadow:0 0 0 black;}
+    10% {text-shadow:-2px -2px 0 black;}
+    20% {text-shadow:0 0 0 black;}
+    21%{color:white;}
+    22%{color:rgba(255,255,255,0.8);}
+    823%{color:white;}
+    50% {text-shadow:1px 1px 0 black;}
+    60% {text-shadow:0 0 0 black;}
+    70% {text-shadow:1px 1px 0 black;}
+    80% {text-shadow:2px 2px 0 black,-2px -2px 0 gray; color:white;}
+    81%{color:transparent;}
+    82% {text-shadow:0 0 0 black;color:white;}
+    83%{/* color:transparent; */}
+    84% {text-shadow:0 0 0 black;color:rgba(255,255,255,0.3);color:white;}
+     85% {text-shadow:-5px -5px 0 black, 5px -2px 0 white, 5px 3px 0 gray;color:white;}
+    86%{text-shadow:0 0 0 black;}
+    100%{text-shadow:0 0 0 black;}
+  }
